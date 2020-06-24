@@ -284,6 +284,13 @@ footer {
     #header {
         position: static;
     }
+    nav {
+        float: left;
+        display: block;
+        width: 100%;
+        /* left-aligned on small screens */
+        text-align: left; 
+      }
     #container {
         width: 100%;
     }
