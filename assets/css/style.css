@@ -137,8 +137,10 @@ nav a:first-child {
     float: left;
     /* 289px is max width for project images to take up container at 980px  with 3 colums*/
     /* 225px is max width for project images to take up container at 768px  with 3 colums*/
-    width: 225px;
-    margin: 5px;
+    /* width: 294px; */
+    /* Changed to max-width % to make images scale with shrinking page */
+    max-width: 40%;
+    margin: 0px 30px 15px;
     overflow: auto;
 }
 
