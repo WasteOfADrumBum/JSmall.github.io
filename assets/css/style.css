@@ -137,9 +137,8 @@ nav a:first-child {
     float: left;
     /* 289px is max width for project images to take up container at 980px  with 3 colums*/
     /* 225px is max width for project images to take up container at 768px  with 3 colums*/
-    /* width: 294px; */
-    /* Changed to max-width % to make images scale with shrinking page */
-    max-width: 40%;
+    /* 294px is max width for project images to take up container at 768px  with 2 colums*/
+    width: 42%;
     margin: 0px 30px 15px;
     overflow: auto;
 }
@@ -151,9 +150,14 @@ nav a:first-child {
 /* Porfolio Images */
 
 .work img {
+    /* Image will always fill class="work" container */
     width: 100%;
     border: 0 none;
     opacity: 0.8;
+}
+
+.work a {
+    display: block;
 }
 
 /* Project Titles */
@@ -303,8 +307,10 @@ footer {
         margin-bottom: 15px;
         width: 100%;
         /* Center links on small screens */
-        align-items: center;
         justify-content: center;
+    }
+    .work{
+        max-width: 100%;
     }
     #main-container {
         /* Fix for padding on small screens */
