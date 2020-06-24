@@ -304,6 +304,10 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    #main-container {
+        /* Fix for padding on small screens */
+        padding-top: 10px;
+    }
     #container {
         width: 100%;
     }
