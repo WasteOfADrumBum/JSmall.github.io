@@ -13,6 +13,8 @@ body {
     background-size:100px 50px;
 }
 
+/* Parent Container Class */
+
 .container {
     width: 100%;
     max-width: 960px;
@@ -95,48 +97,6 @@ nav a:first-child {
     border-left: 0 none;
 }
 
-/* || FOOTER || */
-
-footer {
-    padding: 30px 0;
-    clear: both;
-    font-size: 12px;
-    color: #fff;
-    color: #ccc;
-    text-align: center;
-    background: #666;
-    border-top: 8px solid #4aaaa5;
-}
-
-/* || SOCIAL MEDIA || */
-
-.socialbar {
-    float: right;
-    width: 100%;
-    max-width: 270px;
-    padding: 30px;
-    margin-bottom: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-}
-
-h3, .socialbar h2 {
-    padding-bottom: 20px;
-    margin-bottom: 15px;
-    line-height: 22px;
-    border-bottom: 2px solid #eee;
-}
-
-.social {
-    /* Makes all images the same size */
-    width: 60px;
-    height: 60px;
-    margin-top: 8px;
-    margin-right: 5px;
-    /* Makes icons into a circle */
-    border-radius: 70%;
-}
-
 /* || MAIN CONTENT || */
 
 #main-container {
@@ -144,47 +104,11 @@ h3, .socialbar h2 {
 }
 
 .main-section {
-    float: left;
-    width: 100%;
-    max-width: 650px;
+    float: none;
     padding: 30px;
     margin: 0 0 40px;
     background: #ffffff;
     border: 1px solid #ddd;
-}
-
-/* || PORTFOLIO PAGE || */
-
-.work {
-    position: relative;
-    float: left;
-    width: 274px;
-    margin: 20px 0 25px;
-    overflow: auto;
-}
-
-.work:nth-child(even) {
-    margin-right: 40px;
-}
-
-.work img {
-    width: 100%;
-    border: 0 none;
-    opacity: 0.8;
-}
-
-.work h3 {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 0;
-    font-weight: 300;
-    line-height: 30px;
-    color: #fff;
-    text-align: center;
-    background: #4aaaa5;
-    border-bottom: 0;
 }
 
 /* Profile Picture */
@@ -198,6 +122,46 @@ h3, .socialbar h2 {
     margin-bottom: 10px;
     /* Make into a circle */
     border-radius: 50%;
+}
+
+/* || PORTFOLIO PAGE || */
+
+/* Project Containers */
+
+.work {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
+}
+
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+/* Porfolio Images */
+
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+}
+
+/* Project Titles */
+
+.work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
 }
 
 /* || CONTACT PAGE || */
@@ -235,24 +199,73 @@ input[type=submit] {
     border: 0 none;
 }
 
+/* || SOCIAL MEDIA || */
+
+.socialbar {
+    float: none;
+    padding: 30px;
+    /* Space between social and footer */
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Socialbar h2 */
+
+h3, .socialbar h2 {
+    /* Social Media Header to <hr> spacing */
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    line-height: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.social {
+    /* Makes all images the same size */
+    width: 60px;
+    height: 60px;
+    margin-top: 8px;
+    margin-right: 5px;
+    /* Makes icons into a circle */
+    border-radius: 50%;
+}
+
+/* Social <hr> Line */
+#socialline {
+    border: 1px solid #4aaaa5;
+}
+
+/* || FOOTER || */
+
+footer {
+    padding: 30px 0;
+    clear: both;
+    font-size: 12px;
+    color: #fff;
+    color: #ccc;
+    text-align: center;
+    background: #666;
+    border-top: 8px solid #4aaaa5;
+}
+
 /* || MEDIA SIZE CONTAINERS || */
 
-@media (max-width: 980px) {
+@media screen and (max-width: 980px) {
+    /* NAVBAR CONTAINER */
     #container {
         width: 100%;
     }
+    /* CONTENT CONTAINER */
     .main-section {
-        width: 70%;
+        width: 100%;
     }
+    /* SOCIAL MEDIA CONTAINER */
     .socialbar {
-        width: 30%;
-    }
-    .portfolio {
         width: 100%;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #container {
         width: 100%;
     }
@@ -262,13 +275,10 @@ input[type=submit] {
     .socialbar {
         width: 100%;
     }
-    .portfolio {
-        width: 100%;
-    }
 }
 
-@media (max-width: 640px) {
-    #masthead {
+@media screen and (max-width: 640px) {
+    #header {
         position: static;
     }
     #container {
@@ -278,9 +288,6 @@ input[type=submit] {
         width: 100%;
     }
     .socialbar {
-        width: 100%;
-    }
-    .portfolio {
         width: 100%;
     }
 }
