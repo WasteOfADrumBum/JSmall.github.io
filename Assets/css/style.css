@@ -51,6 +51,7 @@ h2, h3 {
 
 #header {
     position: fixed;
+    /* Keep Header on Top */
     z-index: 99;
     width: 100%;
     margin: 0 0 30px;
@@ -80,7 +81,7 @@ h2, h3 {
 
 nav {
     float: right;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 nav a {
@@ -110,6 +111,8 @@ nav a:first-child {
     background: #ffffff;
     border: 1px solid #ddd;
     overflow: auto;
+    /* Max width 768px per image examples given */
+    max-width: 768px;
 }
 
 /* Profile Picture */
@@ -132,8 +135,9 @@ nav a:first-child {
 .work {
     position: relative;
     float: left;
-    /* 289px is max width for project images to take up container at max size */
-    width: 289px;
+    /* 289px is max width for project images to take up container at 980px  with 3 colums*/
+    /* 225px is max width for project images to take up container at 768px  with 3 colums*/
+    width: 225px;
     margin: 5px;
     overflow: auto;
 }
@@ -210,6 +214,8 @@ input[type=submit] {
     margin-bottom: 20px;
     background: #fff;
     border: 1px solid #ddd;
+    /* Max width 768px to match content container */
+    max-width: 768px;
 }
 
 /* Socialbar h2 */
@@ -284,13 +290,20 @@ footer {
     #header {
         position: static;
     }
+    #logo {
+        width: 100%;
+    }
+    /* Move Navigation under logo */
     nav {
         float: left;
-        display: block;
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 15px;
         width: 100%;
-        /* left-aligned on small screens */
-        text-align: left; 
-      }
+        /* Center links on small screens */
+        align-items: center;
+        justify-content: center;
+    }
     #container {
         width: 100%;
     }
