@@ -109,6 +109,7 @@ nav a:first-child {
     margin: 0 0 40px;
     background: #ffffff;
     border: 1px solid #ddd;
+    overflow: auto;
 }
 
 /* Profile Picture */
@@ -131,13 +132,14 @@ nav a:first-child {
 .work {
     position: relative;
     float: left;
-    width: 274px;
-    margin: 20px 0 25px;
+    /* 289px is max width for project images to take up container at max size */
+    width: 289px;
+    margin: 5px;
     overflow: auto;
 }
 
 .work:nth-child(even) {
-    margin-right: 40px;
+    margin-right: 5px;
 }
 
 /* Porfolio Images */
@@ -239,6 +241,7 @@ h3, .socialbar h2 {
 
 footer {
     padding: 30px 0;
+    /* Clear Floats to keep footer at bottom */
     clear: both;
     font-size: 12px;
     color: #fff;
