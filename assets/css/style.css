@@ -152,7 +152,10 @@ nav a:first-child {
 .work img {
     /* Image will always fill class="work" container */
     width: 100%;
-    border: 0 none;
+    border: 0px none;
+    /* adds thin outline for images with white background */
+    outline: 1px solid #dedede;
+    outline-offset: -1px;
     opacity: 0.8;
 }
 
