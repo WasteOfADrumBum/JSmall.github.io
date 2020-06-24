@@ -138,7 +138,7 @@ nav a:first-child {
     /* 289px is max width for project images to take up container at 980px  with 3 colums*/
     /* 225px is max width for project images to take up container at 768px  with 3 colums*/
     /* 294px is max width for project images to take up container at 768px  with 2 colums*/
-    width: 42%;
+    max-width: 294px;
     margin: 0px 30px 15px;
     overflow: auto;
 }
@@ -284,6 +284,10 @@ footer {
     #container {
         width: 100%;
     }
+    .work{
+        max-width: 40%;
+        width: 100%;
+    }
     .main-section {
         width: 100%;
     }
@@ -310,7 +314,8 @@ footer {
         justify-content: center;
     }
     .work{
-        max-width: 100%;
+        max-width: 90%;
+        width: 100%;
     }
     #main-container {
         /* Fix for padding on small screens */
