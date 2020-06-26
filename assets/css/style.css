@@ -22,15 +22,10 @@ body {
     clear: both;
 }
 
-h1, h2, h3, p {
-    margin-bottom: 20px;
-}
+/* h */
 
-p:last-child {
-    margin-bottom: 0;
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+    font-variant: small-caps;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-weight: 700;
     color: #4aaaa5;
@@ -43,8 +38,44 @@ h1 {
     border-bottom: 3px solid #ddd;
 }
 
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
 h2, h3 {
     font-size: 22px;
+}
+
+/* p */
+
+p {
+    line-height: 27px;
+}
+
+p.indent {
+    text-indent: 45px; 
+}
+
+/* https://www.abeautifulsite.net/css-drop-caps */
+
+p.drop-cap::first-letter {
+    font-size: 4.5em;
+    float: left;
+    margin-top: .15em;
+    margin-right: .07em;
+    color: #4aaaa5;
+    font-style: bold;
+    font-family: 'Slabo';
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+
+p a {
+    color: #4aaaa5;
 }
 
 /* || HEADER || */
@@ -122,7 +153,7 @@ nav a:first-child {
     width: 200px;
     height: auto;
     margin-top: 10px;
-    margin-right: 25px;
+    margin-right: 35px;
     margin-bottom: 10px;
     /* Make into a circle */
     border-radius: 50%;
@@ -181,6 +212,10 @@ nav a:first-child {
 
 /* || CONTACT PAGE || */
 
+#name, #email, #message {
+    font-variant: small-caps;
+}
+
 #contact-form ul {
     margin-bottom: 20px;
 }
@@ -225,6 +260,8 @@ input[type=submit] {
     border: 1px solid #ddd;
     /* Max width 768px to match content container */
     max-width: 768px;
+    text-align: center;
+
 }
 
 /* Socialbar h2 */
@@ -235,19 +272,20 @@ h3, .socialbar h2 {
     margin-bottom: 15px;
     line-height: 10px;
     border-bottom: 2px solid #eee;
+    text-align: left;
 }
 
 .social {
     /* Makes all images the same size */
     width: 60px;
     height: 60px;
-    margin-top: 8px;
-    margin-right: 5px;
+    margin: 8px 10px 10px 0px;
     /* Makes icons into a circle */
     border-radius: 50%;
 }
 
 /* Social <hr> Line */
+
 #socialline {
     border: 1px solid #4aaaa5;
 }
@@ -332,5 +370,11 @@ footer {
     }
     .socialbar {
         width: 100%;
+    }
+    .social {
+        /* Makes all images the same size */
+        width: 45px;
+        height: 45px;
+        margin: 8px 5px 5px 0px;
     }
 }
