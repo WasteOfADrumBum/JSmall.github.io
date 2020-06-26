@@ -361,6 +361,10 @@ footer {
     border-top: 8px solid #4aaaa5;
 }
 
+#contactinfo {
+    line-height: 15px;
+}
+
 /* || MEDIA SIZE CONTAINERS || */
 
 @media screen and (max-width: 980px) {
