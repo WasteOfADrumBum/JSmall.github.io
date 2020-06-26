@@ -10,7 +10,8 @@ body {
     line-height: 25px;
     color: #777;
     background-color:silver;
-    background-size:100px 50px;
+    /* https://codingwiki.fandom.com/wiki/CSS_Patterns */
+    background-image: radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0    150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50%  100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent), radial-gradient(circle at 0    50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent); background-size: 100px 50px;
 }
 
 /* Parent Container Class */
@@ -18,6 +19,7 @@ body {
 .container {
     width: 100%;
     max-width: 960px;
+    min-width: 320px;
     margin: 0 auto;
     clear: both;
 }
@@ -144,6 +146,7 @@ nav a:first-child {
     overflow: auto;
     /* Max width 768px per image examples given */
     max-width: 768px;
+    box-shadow: 4px 4px 15px 2px #333333;
 }
 
 /* Profile Picture */
@@ -192,7 +195,20 @@ nav a:first-child {
     /* adds thin outline for images with white background */
     outline: 1px solid #dedede;
     outline-offset: -1px;
-    opacity: 0.8;
+    cursor: pointer;
+    
+}
+
+/* image hover attributes */
+
+.work:hover {
+    /* Makes images ease towards user when hovered */
+    transform: scale(1.1);
+    transition: all .8s ease;
+}
+
+.work h3:hover {
+    background-color: #999;
 }
 
 .work a {
@@ -213,6 +229,36 @@ nav a:first-child {
     text-align: center;
     background: #4aaaa5;
     border-bottom: 0;
+    opacity: 0.8;
+}
+
+/* || Education links || */
+
+.linksbar {
+    float: none;
+    padding: 30px;
+    /* Space between social and footer */
+    margin-bottom: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    /* Max width 768px to match content container */
+    max-width: 768px;
+    text-align: center;
+    box-shadow: 4px 4px 15px 2px #333333;
+}
+
+.schoolseal {
+    /* Makes all images the same size */
+    width: 100px;
+    margin: 8px 10px 10px 0px;
+    /* Makes icons into a circle */
+    border-radius: 50%;
+}
+
+.schoolseal:hover {
+    /* Makes images ease towards user when hovered */
+    transform: scale(1.1);
+    transition: all .8s ease;
 }
 
 /* || CONTACT PAGE || */
@@ -266,12 +312,12 @@ input[type=submit] {
     /* Max width 768px to match content container */
     max-width: 768px;
     text-align: center;
-
+    box-shadow: 4px 4px 15px 2px #333333;
 }
 
 /* Socialbar h2 */
 
-h3, .socialbar h2 {
+h3, .socialbar h2, .linksbar h2 {
     /* Social Media Header to <hr> spacing */
     padding-bottom: 0px;
     margin-bottom: 15px;
@@ -287,6 +333,12 @@ h3, .socialbar h2 {
     margin: 8px 10px 10px 0px;
     /* Makes icons into a circle */
     border-radius: 50%;
+}
+
+.social:hover {
+    /* Makes images ease towards user when hovered */
+    transform: scale(1.1);
+    transition: all .8s ease;
 }
 
 /* Social <hr> Line */
@@ -381,5 +433,12 @@ footer {
         width: 45px;
         height: 45px;
         margin: 8px 5px 5px 0px;
+    }
+    /* Makes links fit to 2x2 on small screen */
+    .links {
+        width: 100%;
+    }
+    .schoolseal {
+        width:40%;
     }
 }
