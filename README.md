@@ -89,3 +89,9 @@ https://github.com/WasteOfADrumBum/JSmall.github.io
 - - -
 
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+Preview:
+
+<img src="https://github.com/WasteOfADrumBum/Responsive-Portfolio/blob/master/assets/images/preview/hw2aboutme.png" width="50%">
+<img src="https://github.com/WasteOfADrumBum/Responsive-Portfolio/blob/master/assets/images/preview/hw2port.png" width="50%">
+<img src="https://github.com/WasteOfADrumBum/Responsive-Portfolio/blob/master/assets/images/preview/hw2contact.png" width="50%">
