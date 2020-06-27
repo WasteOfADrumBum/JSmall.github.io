@@ -309,7 +309,7 @@ input[type=submit] {
     border: 0 none;
 }
 
-/* || BLOG RSS || */
+/* || BLOG || */
 
 .blogrss {
     float: right;
@@ -323,19 +323,51 @@ input[type=submit] {
     min-height: 500px;
 }
 
-#widgetmain {
-    text-align: left;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: transparent;
+.objectgrind img {
+    /* Image will always fill class="work" container */
+    width: 100%;
+    border: 0px none;
+    /* adds thin outline for images with white background */
+    outline: 1px solid #dedede;
+    outline-offset: -1px;
+    cursor: pointer;
+    margin-bottom: 15px;
 }
 
-#rssOutput {
-    border:0;
-    padding:0;
-    margin:0;
-    width:200px;
-    height:500px;
+.objectgrind:hover {
+    /* Makes images ease towards user when hovered */
+    transform: scale(1.1);
+    transition: all .8s ease;
+}
+
+.objectgrind a {
+    display: block;
+}
+
+#objectgrindinfo {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* Project Titles */
+
+.work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+    opacity: 0.8;
+}
+
+.worktitle {
+    clear: both;
 }
 
 /* || SOCIAL MEDIA || */
