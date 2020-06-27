@@ -134,18 +134,20 @@ nav a:first-child {
 /* || MAIN CONTENT || */
 
 #main-container {
-    padding-top: 130px;
+    padding-top: 130px;    
 }
 
 .main-section {
-    float: none;
+    float: left;
     padding: 30px;
     margin: 0 0 40px;
     background: #ffffff;
     border: 1px solid #ddd;
     overflow: auto;
     /* Max width 768px per image examples given */
-    max-width: 768px;
+    /* max-width: 768px; */
+    max-width: 650px;
+    width: 100%;
     box-shadow: 4px 4px 15px 2px #333333;
 }
 
@@ -177,7 +179,9 @@ nav a:first-child {
     /* 289px is max width for project images to take up container at 980px  with 3 colums*/
     /* 225px is max width for project images to take up container at 768px  with 3 colums*/
     /* 294px is max width for project images to take up container at 768px  with 2 colums*/
-    max-width: 294px;
+    /* max-width: 294px; */
+    /* 246px is max width for project images to take up container at 650px  with 2 colums*/
+    max-width: 246px;
     margin: 0px 30px 15px;
     overflow: auto;
 }
@@ -232,17 +236,22 @@ nav a:first-child {
     opacity: 0.8;
 }
 
+.worktitle {
+    clear: both;
+}
+
 /* || Education links || */
 
 .linksbar {
-    float: none;
+    float: left;
     padding: 30px;
     /* Space between social and footer */
     margin-bottom: 40px;
     background: #fff;
     border: 1px solid #ddd;
     /* Max width 768px to match content container */
-    max-width: 768px;
+    /* max-width: 768px; */
+    width: 100%;
     text-align: center;
     box-shadow: 4px 4px 15px 2px #333333;
 }
@@ -300,17 +309,46 @@ input[type=submit] {
     border: 0 none;
 }
 
+/* || BLOG RSS || */
+
+.blogrss {
+    float: right;
+    width: 100%;
+    max-width: 270px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 4px 4px 15px 2px #333333;
+}
+
+#widgetmain {
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+#rssOutput {
+    border:0;
+    padding:0;
+    margin:0;
+    width:200px;
+    height:500px;
+}
+
 /* || SOCIAL MEDIA || */
 
 .socialbar {
-    float: none;
+    float: left;
     padding: 30px;
     /* Space between social and footer */
     margin-bottom: 20px;
     background: #fff;
     border: 1px solid #ddd;
     /* Max width 768px to match content container */
-    max-width: 768px;
+    /* max-width: 768px; */
+    width: 100%;
     text-align: center;
     box-shadow: 4px 4px 15px 2px #333333;
 }
@@ -382,6 +420,17 @@ footer {
     }
 }
 
+@media screen and (max-width: 967px) {
+    .main-section {
+        max-width: 100%;
+        float: none;
+    }
+    .blogrss{
+        max-width: 100%;
+        float: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #container {
         width: 100%;
@@ -415,6 +464,10 @@ footer {
         /* Center links on small screens */
         justify-content: center;
     }
+    .blogrss{
+        float: left;
+        max-width: 100%;
+    }
     .work{
         max-width: 90%;
         width: 100%;
@@ -444,5 +497,11 @@ footer {
     }
     .schoolseal {
         width:40%;
+    }
+    h1, h2, h3,h4 {
+        text-align: center;
+    }
+    .socialbar h2 {
+        text-align: center;
     }
 }
